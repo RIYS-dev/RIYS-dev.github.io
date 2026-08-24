@@ -1,0 +1,168 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fafafa;
+  --fg: #1a1a1a;
+  --muted: #5c5c5c;
+  --border: #dcdcdc;
+  --card: #ffffff;
+  --accent: #2f6df6;
+  --soon-bg: #fff3cd;
+  --soon-fg: #6b4e00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111214;
+    --fg: #ececec;
+    --muted: #a0a0a0;
+    --border: #2c2e33;
+    --card: #191b1f;
+    --accent: #7aa2ff;
+    --soon-bg: #3a2f0a;
+    --soon-fg: #f3d27a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.mark {
+  display: block;
+  margin: 0 auto 1.25rem;
+  width: 120px;
+  height: 120px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 3rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+.tagline {
+  margin: 0.25rem 0 1.5rem;
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+
+.lede {
+  margin: 0 auto;
+  max-width: 34rem;
+  font-size: 1.05rem;
+}
+
+.projects h2 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.projects ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.projects li {
+  padding: 1.25rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.projects li p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+}
+
+.project-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.status-soon {
+  background: var(--soon-bg);
+  color: var(--soon-fg);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 2.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .mark {
+    width: 96px;
+    height: 96px;
+  }
+}
